@@ -1,0 +1,23 @@
+{
+  "name": "wordwolf",
+  "version": "1.0.0",
+  "description": "A word finder",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mukundan314/WordWolf.git"
+  },
+  "keywords": [
+    "Electron",
+    "dictionary"
+  ],
+  "author": "Mukundan314",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mukundan314/WordWolf/issues"
+  },
+  "homepage": "https://github.com/Mukundan314/WordWolf#readme"
+}
