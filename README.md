@@ -1,2 +1,2 @@
 # WordWolf
-a word finder
+Multi-purpose Anagrammer inspired by https://www.anagrammer.com/
