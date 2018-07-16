@@ -1,2 +1,2 @@
 # WordWolf
-Multi-purpose Anagrammer inspired by https://www.anagrammer.com/
+A word finder written in Python.
