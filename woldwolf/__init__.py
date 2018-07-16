@@ -1,2 +1,2 @@
 """Initialization File"""
-from .wordwolf import Anagrammer
+from .wordwolf import Dictionary
