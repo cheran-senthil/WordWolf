@@ -41,4 +41,4 @@ class Dictionary:
             if wildcards_required <= wildcards:
                 sub_words.append(word)
 
-        return sub_words
+        return sub_words.sort(key=len)
