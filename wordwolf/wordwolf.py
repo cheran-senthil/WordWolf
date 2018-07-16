@@ -19,7 +19,7 @@ class Dictionary:
                 word_dict[letter] += 1
             self.counter_dict[word] = word_dict
 
-    def search(self, letters):
+    def search(self, letters, start='', end='', contains=''):
         """Search for subwords"""
 
         letters_dict = dict(zip(Dictionary.CHARECTERS, [0]*28))
@@ -33,12 +33,13 @@ class Dictionary:
         sub_words = []
 
         for word, word_dict in self.counter_dict.items():
-            wildcards_required = 0
-            for letter in Dictionary.LETTERS:
-                extra_letters = word_dict[letter] - letters_dict[letter]
-                if extra_letters > 0:
-                    wildcards_required += extra_letters
-            if wildcards_required <= wildcards:
-                sub_words.append(word)
+            if word.startswith(start) and word.endswith(end) and (contains in word):
+                wildcards_required = 0
+                for letter in Dictionary.LETTERS:
+                    extra_letters = word_dict[letter] - letters_dict[letter]
+                    if extra_letters > 0:
+                        wildcards_required += extra_letters
+                if wildcards_required <= wildcards:
+                    sub_words.append(word)
 
         return sub_words.sort(key=len)
