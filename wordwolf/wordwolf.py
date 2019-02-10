@@ -1,5 +1,6 @@
 """WoldWolf Anagrammer"""
 
+
 class Dictionary:
     """Dictionary class to support operations"""
 
@@ -14,7 +15,7 @@ class Dictionary:
         self.counter_dict = {}
 
         for word in self.dictionary:
-            word_dict = dict(zip(Dictionary.LETTERS, [0]*26))
+            word_dict = dict(zip(Dictionary.LETTERS, [0] * 26))
             for letter in word:
                 word_dict[letter] += 1
             self.counter_dict[word] = word_dict
@@ -22,7 +23,7 @@ class Dictionary:
     def search(self, letters, start='', end='', contains=''):
         """Search for subwords"""
 
-        letters_dict = dict(zip(Dictionary.CHARECTERS, [0]*28))
+        letters_dict = dict(zip(Dictionary.CHARECTERS, [0] * 28))
         for letter in letters:
             letters_dict[letter] += 1
 
@@ -33,7 +34,8 @@ class Dictionary:
         sub_words = []
 
         for word, word_dict in self.counter_dict.items():
-            if word.startswith(start) and word.endswith(end) and (contains in word):
+            if word.startswith(start) and word.endswith(end) and (
+                    contains in word):
                 wildcards_required = 0
                 for letter in Dictionary.LETTERS:
                     extra_letters = word_dict[letter] - letters_dict[letter]
